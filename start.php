@@ -1,6 +1,6 @@
 <?php
 
-include_once 'env.php'
+include_once 'env.php';
 require_once 'database.php';
 
 require_once 'entities/repository.interface.php';
