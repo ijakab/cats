@@ -2,7 +2,6 @@
 namespace Cat;
 
 class CatRepository implements IRepository {
-    private $seeded = false;
     private $db;
 
     function __construct($db) {
@@ -24,10 +23,8 @@ class CatRepository implements IRepository {
     }
 
     public function seed() {
-        if($this->seeded) return;
         $this->db->Query("insert into cats values ('', 'Cat McTerror', 3, 'Very loud', 22, 4, 'img/cat1.png')");
         $this->db->Query("insert into cats values ('', 'Caterson CatSpyder Silva', 5, 'Slim, broke leg in past years', 34, 18, 'img/cat02.png')");
-        $this->seeded = true;
     }
 
     public function getAll(): array {
