@@ -2,4 +2,6 @@
 .vscode
 .idea
 env.php
-html/img/
+html/img/*
+!html/img/cat1.png
+!html/img/cat02.png
